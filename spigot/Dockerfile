@@ -1,4 +1,4 @@
 # syntax=docker/dockerfile:1
 FROM .
 
-COPY spigot.yml /
+RUN sleep 60; COPY spigot.yml /

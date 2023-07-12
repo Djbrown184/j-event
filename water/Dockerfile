@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1
 FROM .
 
-COPY config.yml /
+RUN sleep 60; COPY config.yml /
