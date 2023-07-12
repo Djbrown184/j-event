@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  gx_team_06:
+    build: spigot
+    container_name: gx_team_06
+    image: itzg/minecraft-server:latest
+    volumes:
+      - TEAM_06:/data
+    env_file: gx_team_06.env
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    networks:
+      - gx_event
+
+volumes:
+  TEAM_06: { }
+
+networks:
+  gx_event:

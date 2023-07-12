@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  gx_lobby:
+    build: spigot
+    container_name: gx_lobby
+    image: itzg/minecraft-server:latest
+    volumes:
+      - LOBBY:/data
+    env_file: gx_lobby.env
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    networks:
+      - gx_event
+
+volumes:
+  LOBBY: { }
+
+networks:
+  gx_event:
