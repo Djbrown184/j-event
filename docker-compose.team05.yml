@@ -12,10 +12,12 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
 
 volumes:
   TEAM_05: { }
 
 networks:
-  gx_event:
+  mc:
+    external: true
+    name: mc
