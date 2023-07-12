@@ -1,5 +1,6 @@
+# syntax=docker/dockerfile:1
 FROM itzg/minecraft-server
 
 ENV TYPE=PAPER
 
-COPY ./spigot.yml ./spigot.yml
+COPY spigot.yml .
