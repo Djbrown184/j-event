@@ -1,6 +1,4 @@
 # syntax=docker/dockerfile:1
-FROM itzg/bungeecord
-
-ENV TYPE=WATERFALL
+FROM .
 
 COPY config.yml /
