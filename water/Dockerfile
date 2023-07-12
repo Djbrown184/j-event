@@ -2,4 +2,4 @@ FROM itzg/bungeecord
 
 ENV TYPE=WATERFALL
 
-COPY config.yml /server
+COPY config.yml /
