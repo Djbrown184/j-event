@@ -177,6 +177,6 @@ volumes:
   GX_TEAM_10: { }
 
 networks:
-  mc:
+  j-event:
     external:
       name: j-event_default
