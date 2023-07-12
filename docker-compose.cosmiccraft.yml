@@ -8,9 +8,9 @@ services:
     ports:
       - '25565:25577'
     volumes:
-      - GX_WATER_SERVER:/server
-      - GX_WATER_CONFIG:/config
-      - GX_WATER_PLUGINS:/plugins
+      - WATER_SERVER:/server
+      - WATER_CONFIG:/config
+      - WATER_PLUGINS:/plugins
     env_file: gx-water.env
     restart: unless-stopped
     networks:
@@ -20,7 +20,7 @@ services:
     container_name: gx-lobby
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_LOBBY:/data
+      - LOBBY:/data
     env_file: gx-lobby.env
     restart: unless-stopped
     tty: true
@@ -32,7 +32,7 @@ services:
     container_name: gx-team-01
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_01:/data
+      - TEAM_01:/data
     env_file: gx-team-01.env
     restart: unless-stopped
     tty: true
@@ -44,7 +44,7 @@ services:
     container_name: gx-team-02
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_02:/data
+      - TEAM_02:/data
     env_file: gx-team-02.env
     restart: unless-stopped
     tty: true
@@ -56,7 +56,7 @@ services:
     container_name: gx-team-03
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_03:/data
+      - TEAM_03:/data
     env_file: gx-team-03.env
     restart: unless-stopped
     tty: true
@@ -68,7 +68,7 @@ services:
     container_name: gx-team-04
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_04:/data
+      - TEAM_04:/data
     env_file: gx-team-04.env
     restart: unless-stopped
     tty: true
@@ -80,7 +80,7 @@ services:
     container_name: gx-team-05
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_05:/data
+      - TEAM_05:/data
     env_file: gx-team-05.env
     restart: unless-stopped
     tty: true
@@ -92,7 +92,7 @@ services:
     container_name: gx-team-06
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_06:/data
+      - TEAM_06:/data
     env_file: gx-team-06.env
     restart: unless-stopped
     tty: true
@@ -104,7 +104,7 @@ services:
     container_name: gx-team-07
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_07:/data
+      - TEAM_07:/data
     env_file: gx-team-07.env
     restart: unless-stopped
     tty: true
@@ -116,7 +116,7 @@ services:
     container_name: gx-team-08
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_08:/data
+      - TEAM_08:/data
     env_file: gx-team-08.env
     restart: unless-stopped
     tty: true
@@ -128,7 +128,7 @@ services:
     container_name: gx-team-09
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_09:/data
+      - TEAM_09:/data
     env_file: gx-team-09.env
     restart: unless-stopped
     tty: true
@@ -140,7 +140,7 @@ services:
     container_name: gx-team-10
     image: itzg/minecraft-server:latest
     volumes:
-      - GX_TEAM_10:/data
+      - TEAM_10:/data
     env_file: gx-team-10.env
     restart: unless-stopped
     tty: true
@@ -149,20 +149,20 @@ services:
       - j-event
 
 volumes:
-  GX_WATER_SERVER: { }
-  GX_WATER_CONFIG: { }
-  GX_WATER_PLUGINS: { }
-  GX_LOBBY: { }
-  GX_TEAM_01: { }
-  GX_TEAM_02: { }
-  GX_TEAM_03: { }
-  GX_TEAM_04: { }
-  GX_TEAM_05: { }
-  GX_TEAM_06: { }
-  GX_TEAM_07: { }
-  GX_TEAM_08: { }
-  GX_TEAM_09: { }
-  GX_TEAM_10: { }
+  WATER_SERVER: { }
+  WATER_CONFIG: { }
+  WATER_PLUGINS: { }
+  LOBBY: { }
+  TEAM_01: { }
+  TEAM_02: { }
+  TEAM_03: { }
+  TEAM_04: { }
+  TEAM_05: { }
+  TEAM_06: { }
+  TEAM_07: { }
+  TEAM_08: { }
+  TEAM_09: { }
+  TEAM_10: { }
 
 networks:
   j-event:
