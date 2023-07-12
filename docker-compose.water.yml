@@ -16,15 +16,3 @@ services:
 
 volumes:
   WATER: { }
-
-networks:
-  gx_event:
-    internal: true
-    name: gx_event_mc
-    driver: bridge
-    attachable: false
-    ipam:
-      driver: default
-      config:
-        - subnet: "172.19.0.0/16"
-        - gateway: "172.19.0.1"
