@@ -9,6 +9,8 @@ services:
       - '25565:25577'
     volumes:
       - WATER_SERVER:/server
+      - WATER_CONFIG:/config
+      - WATER_PLUGINS:/plugins
     env_file: gx_water.env
     restart: unless-stopped
     networks:
