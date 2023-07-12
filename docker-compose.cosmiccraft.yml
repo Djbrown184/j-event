@@ -12,7 +12,7 @@ services:
     env_file: gx_water.env
     restart: unless-stopped
     networks:
-      - gx_event
+      - mc
   gx_lobby:
     build: spigot
     container_name: gx_lobby
@@ -24,7 +24,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_01:
     build: spigot
     container_name: gx_team_01
@@ -36,7 +36,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_02:
     build: spigot
     container_name: gx_team_02
@@ -48,7 +48,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_03:
     build: spigot
     container_name: gx_team_03
@@ -60,7 +60,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_04:
     build: spigot
     container_name: gx_team_04
@@ -72,7 +72,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_05:
     build: spigot
     container_name: gx_team_05
@@ -84,7 +84,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_06:
     build: spigot
     container_name: gx_team_06
@@ -96,7 +96,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_07:
     build: spigot
     container_name: gx_team_07
@@ -108,7 +108,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_08:
     build: spigot
     container_name: gx_team_08
@@ -120,7 +120,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_09:
     build: spigot
     container_name: gx_team_09
@@ -132,7 +132,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
   gx_team_10:
     build: spigot
     container_name: gx_team_10
@@ -144,7 +144,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - gx_event
+      - mc
 
 volumes:
   WATER: { }
@@ -161,4 +161,4 @@ volumes:
   TEAM_10: { }
 
 networks:
-  gx_event:
+  mc:

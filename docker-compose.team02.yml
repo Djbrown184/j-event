@@ -19,5 +19,3 @@ volumes:
 
 networks:
   mc:
-    external: true
-    name: mc
