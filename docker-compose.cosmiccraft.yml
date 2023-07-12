@@ -178,4 +178,5 @@ volumes:
 
 networks:
   j-event:
+    external: true
     name: j-event_default
