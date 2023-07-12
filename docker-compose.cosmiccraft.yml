@@ -149,42 +149,18 @@ services:
       - GX_EVENT
 
 volumes:
-  GX_WATER: {
-    driver: local
-  }
-  GX_LOBBY: {
-    driver: local
-  }
-  GX_TEAM_01: {
-    driver: local
-  }
-  GX_TEAM_02: {
-    driver: local
-  }
-  GX_TEAM_03: {
-    driver: local
-  }
-  GX_TEAM_04: {
-    driver: local
-  }
-  GX_TEAM_05: {
-    driver: local
-  }
-  GX_TEAM_06: {
-    driver: local
-  }
-  GX_TEAM_07: {
-    driver: local
-  }
-  GX_TEAM_08: {
-    driver: local
-  }
-  GX_TEAM_09: {
-    driver: local
-  }
-  GX_TEAM_10: {
-    driver: local
-  }
+  GX_WATER: {}
+  GX_LOBBY: {}
+  GX_TEAM_01: {}
+  GX_TEAM_02: {}
+  GX_TEAM_03: {}
+  GX_TEAM_04: {}
+  GX_TEAM_05: {}
+  GX_TEAM_06: {}
+  GX_TEAM_07: {}
+  GX_TEAM_08: {}
+  GX_TEAM_09: {}
+  GX_TEAM_10: {}
 
 networks:
   GX_EVENT:
