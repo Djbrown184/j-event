@@ -15,7 +15,7 @@ services:
     env_file: gx-water.env
     restart: unless-stopped
     networks:
-      - mc
+      - j-event
   gx-lobby:
     build: spigot
     container_name: gx-lobby
@@ -28,7 +28,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-01:
     build: spigot
     container_name: gx-team-01
@@ -41,7 +41,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-02:
     build: spigot
     container_name: gx-team-02
@@ -54,7 +54,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-03:
     build: spigot
     container_name: gx-team-03
@@ -67,7 +67,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-04:
     build: spigot
     container_name: gx-team-04
@@ -80,7 +80,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-05:
     build: spigot
     container_name: gx-team-05
@@ -93,7 +93,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-06:
     build: spigot
     container_name: gx-team-06
@@ -106,7 +106,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-07:
     build: spigot
     container_name: gx-team-07
@@ -119,7 +119,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-08:
     build: spigot
     container_name: gx-team-08
@@ -132,7 +132,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-09:
     build: spigot
     container_name: gx-team-09
@@ -145,7 +145,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
   gx-team-10:
     build: spigot
     container_name: gx-team-10
@@ -158,7 +158,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mc
+      - j-event
 
 volumes:
   GX_WATER_SERVER: { }
@@ -178,4 +178,5 @@ volumes:
 
 networks:
   mc:
-    driver: bridge
+    external:
+      name: j-event_default
