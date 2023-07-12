@@ -1,150 +1,150 @@
 version: "3.8"
 
 services:
-  gx-water:
+  gx_water:
     build: water
-    container_name: gx-water
+    container_name: gx_water
     image: itzg/bungeecoord:latest
     ports:
       - '25565:25577'
     volumes:
       - WATER_SERVER:/server
-    env_file: gx-water.env
+    env_file: gx_water.env
     restart: unless-stopped
     networks:
-      - j-event
-  gx-lobby:
+      - gx_event
+  gx_lobby:
     build: spigot
-    container_name: gx-lobby
+    container_name: gx_lobby
     image: itzg/minecraft-server:latest
     volumes:
       - LOBBY:/data
-    env_file: gx-lobby.env
+    env_file: gx_lobby.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-01:
+      - gx_event
+  gx_team_01:
     build: spigot
-    container_name: gx-team-01
+    container_name: gx_team_01
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_01:/data
-    env_file: gx-team-01.env
+    env_file: gx_team_01.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-02:
+      - gx_event
+  gx_team_02:
     build: spigot
-    container_name: gx-team-02
+    container_name: gx_team_02
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_02:/data
-    env_file: gx-team-02.env
+    env_file: gx_team_02.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-03:
+      - gx_event
+  gx_team_03:
     build: spigot
-    container_name: gx-team-03
+    container_name: gx_team_03
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_03:/data
-    env_file: gx-team-03.env
+    env_file: gx_team_03.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-04:
+      - gx_event
+  gx_team_04:
     build: spigot
-    container_name: gx-team-04
+    container_name: gx_team_04
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_04:/data
-    env_file: gx-team-04.env
+    env_file: gx_team_04.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-05:
+      - gx_event
+  gx_team_05:
     build: spigot
-    container_name: gx-team-05
+    container_name: gx_team_05
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_05:/data
-    env_file: gx-team-05.env
+    env_file: gx_team_05.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-06:
+      - gx_event
+  gx_team_06:
     build: spigot
-    container_name: gx-team-06
+    container_name: gx_team_06
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_06:/data
-    env_file: gx-team-06.env
+    env_file: gx_team_06.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-07:
+      - gx_event
+  gx_team_07:
     build: spigot
-    container_name: gx-team-07
+    container_name: gx_team_07
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_07:/data
-    env_file: gx-team-07.env
+    env_file: gx_team_07.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-08:
+      - gx_event
+  gx_team_08:
     build: spigot
-    container_name: gx-team-08
+    container_name: gx_team_08
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_08:/data
-    env_file: gx-team-08.env
+    env_file: gx_team_08.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-09:
+      - gx_event
+  gx_team_09:
     build: spigot
-    container_name: gx-team-09
+    container_name: gx_team_09
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_09:/data
-    env_file: gx-team-09.env
+    env_file: gx_team_09.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
-  gx-team-10:
+      - gx_event
+  gx_team_10:
     build: spigot
-    container_name: gx-team-10
+    container_name: gx_team_10
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_10:/data
-    env_file: gx-team-10.env
+    env_file: gx_team_10.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - j-event
+      - gx_event
 
 volumes:
   WATER_SERVER: { }
@@ -163,6 +163,6 @@ volumes:
   TEAM_10: { }
 
 networks:
-  j-event:
+  gx_event:
     internal: true
-    name: j-event_mc
+    name: gx_event_mc
