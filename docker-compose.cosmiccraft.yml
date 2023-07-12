@@ -156,7 +156,7 @@ volumes:
     driver: local
   }
   GX_TEAM_01: {
-    driver: locale
+    driver: local
   }
   GX_TEAM_02: {
     driver: local
