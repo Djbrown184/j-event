@@ -149,18 +149,20 @@ services:
       - GX_EVENT
 
 volumes:
-  GX_WATER: {}
-  GX_LOBBY: {}
-  GX_TEAM_01: {}
-  GX_TEAM_02: {}
-  GX_TEAM_03: {}
-  GX_TEAM_04: {}
-  GX_TEAM_05: {}
-  GX_TEAM_06: {}
-  GX_TEAM_07: {}
-  GX_TEAM_08: {}
-  GX_TEAM_09: {}
-  GX_TEAM_10: {}
+  GX_WATER_SERVER: { }
+  GX_WATER_CONFIG: { }
+  GX_WATER_PLUGINS: { }
+  GX_LOBBY: { }
+  GX_TEAM_01: { }
+  GX_TEAM_02: { }
+  GX_TEAM_03: { }
+  GX_TEAM_04: { }
+  GX_TEAM_05: { }
+  GX_TEAM_06: { }
+  GX_TEAM_07: { }
+  GX_TEAM_08: { }
+  GX_TEAM_09: { }
+  GX_TEAM_10: { }
 
 networks:
   GX_EVENT:
