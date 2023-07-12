@@ -23,46 +23,46 @@ servers:
     motd: '&1lobbyeee'
     address: localhost:25565
     restricted: false
-  team01:
-    motd: '&1Team01'
-    address: localhost:25566
-    restricted: false
-  team02:
-    motd: '&1Team02'
-    address: localhost:25567
-    restricted: false
-  team03:
-    motd: '&1Team03'
-    address: localhost:25568
-    restricted: false
-  team04:
-    motd: '&1Team04'
-    address: localhost:25569
-    restricted: false
-  team05:
-    motd: '&1Team05'
-    address: localhost:25570
-    restricted: false
-  team06:
-    motd: '&1Team06'
-    address: localhost:25571
-    restricted: false
-  team07:
-    motd: '&1Team07'
-    address: localhost:25572
-    restricted: false
-  team08:
-    motd: '&1Team08'
-    address: localhost:25573
-    restricted: false
-  team09:
-    motd: '&1Team09'
-    address: localhost:25574
-    restricted: false
-  team10:
-    motd: '&1Team10'
-    address: localhost:25575
-    restricted: false
+  # team01:
+  #   motd: '&1Team01'
+  #   address: localhost:25566
+  #   restricted: false
+  # team02:
+  #   motd: '&1Team02'
+  #   address: localhost:25567
+  #   restricted: false
+  # team03:
+  #   motd: '&1Team03'
+  #   address: localhost:25568
+  #   restricted: false
+  # team04:
+  #   motd: '&1Team04'
+  #   address: localhost:25569
+  #   restricted: false
+  # team05:
+  #   motd: '&1Team05'
+  #   address: localhost:25570
+  #   restricted: false
+  # team06:
+  #   motd: '&1Team06'
+  #   address: localhost:25571
+  #   restricted: false
+  # team07:
+  #   motd: '&1Team07'
+  #   address: localhost:25572
+  #   restricted: false
+  # team08:
+  #   motd: '&1Team08'
+  #   address: localhost:25573
+  #   restricted: false
+  # team09:
+  #   motd: '&1Team09'
+  #   address: localhost:25574
+  #   restricted: false
+  # team10:
+  #   motd: '&1Team10'
+  #   address: localhost:25575
+  #   restricted: false
 listeners:
 - query_port: 25577
   motd: '&1CosmicCraft'
