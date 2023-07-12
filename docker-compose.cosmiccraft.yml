@@ -5,6 +5,7 @@ services:
     build: water
     container_name: gx-water
     image: itzg/bungeecoord:latest
+    pull_policy: build
     ports:
       - '25565:25577'
     volumes:
@@ -17,6 +18,7 @@ services:
     build: spigot
     container_name: gx-lobby
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_LOBBY:/data
     env_file: gx-lobby.env
@@ -27,6 +29,7 @@ services:
     build: spigot
     container_name: gx-team-01
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_01:/data
     env_file: gx-team-01.env
@@ -37,6 +40,7 @@ services:
     build: spigot
     container_name: gx-team-02
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_02:/data
     env_file: gx-team-02.env
@@ -47,6 +51,7 @@ services:
     build: spigot
     container_name: gx-team-03
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_03:/data
     env_file: gx-team-03.env
@@ -57,6 +62,7 @@ services:
     build: spigot
     container_name: gx-team-04
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_04:/data
     env_file: gx-team-04.env
@@ -67,6 +73,7 @@ services:
     build: spigot
     container_name: gx-team-05
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_05:/data
     env_file: gx-team-05.env
@@ -77,6 +84,7 @@ services:
     build: spigot
     container_name: gx-team-06
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_06:/data
     env_file: gx-team-06.env
@@ -87,6 +95,7 @@ services:
     build: spigot
     container_name: gx-team-07
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_07:/data
     env_file: gx-team-07.env
@@ -97,6 +106,7 @@ services:
     build: spigot
     container_name: gx-team-08
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_08:/data
     env_file: gx-team-08.env
@@ -107,6 +117,7 @@ services:
     build: spigot
     container_name: gx-team-09
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_09:/data
     env_file: gx-team-09.env
@@ -117,6 +128,7 @@ services:
     build: spigot
     container_name: gx-team-10
     image: itzg/minecraft-server:latest
+    pull_policy: build
     volumes:
       - GX_TEAM_10:/data
     env_file: gx-team-10.env
@@ -139,3 +151,4 @@ volumes:
   GX_TEAM_08: { }
   GX_TEAM_09: { }
   GX_TEAM_10: { }
+
