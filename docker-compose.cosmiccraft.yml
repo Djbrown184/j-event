@@ -4,8 +4,8 @@ services:
   gx-water:
     build: water
     container_name: gx-water
-    image: itzg/bungeecoord:latest
     pull_policy: build
+    image: itzg/bungeecoord:latest
     ports:
       - '25565:25577'
     volumes:
@@ -14,127 +14,151 @@ services:
       - GX_WATER_PLUGINS:/plugins
     env_file: gx-water.env
     restart: unless-stopped
+    networks:
+      - mc
   gx-lobby:
     build: spigot
     container_name: gx-lobby
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_LOBBY:/data
     env_file: gx-lobby.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-01:
     build: spigot
     container_name: gx-team-01
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_01:/data
     env_file: gx-team-01.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-02:
     build: spigot
     container_name: gx-team-02
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_02:/data
     env_file: gx-team-02.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-03:
     build: spigot
     container_name: gx-team-03
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_03:/data
     env_file: gx-team-03.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-04:
     build: spigot
     container_name: gx-team-04
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_04:/data
     env_file: gx-team-04.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-05:
     build: spigot
     container_name: gx-team-05
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_05:/data
     env_file: gx-team-05.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-06:
     build: spigot
     container_name: gx-team-06
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_06:/data
     env_file: gx-team-06.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-07:
     build: spigot
     container_name: gx-team-07
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_07:/data
     env_file: gx-team-07.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-08:
     build: spigot
     container_name: gx-team-08
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_08:/data
     env_file: gx-team-08.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-09:
     build: spigot
     container_name: gx-team-09
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_09:/data
     env_file: gx-team-09.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
   gx-team-10:
     build: spigot
     container_name: gx-team-10
-    image: itzg/minecraft-server:latest
     pull_policy: build
+    image: itzg/minecraft-server:latest
     volumes:
       - GX_TEAM_10:/data
     env_file: gx-team-10.env
     restart: unless-stopped
     tty: true
     stdin_open: true
+    networks:
+      - mc
 
 volumes:
   GX_WATER_SERVER: { }
@@ -152,3 +176,6 @@ volumes:
   GX_TEAM_09: { }
   GX_TEAM_10: { }
 
+networks:
+  mc:
+    driver: bridge
