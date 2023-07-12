@@ -159,3 +159,6 @@ volumes:
   TEAM_08: { }
   TEAM_09: { }
   TEAM_10: { }
+
+networks:
+  gx_event:

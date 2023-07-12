@@ -16,3 +16,6 @@ services:
 
 volumes:
   WATER: { }
+
+networks:
+  gx_event:
