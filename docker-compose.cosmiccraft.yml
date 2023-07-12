@@ -13,8 +13,6 @@ services:
       - GX_WATER_PLUGINS:/plugins
     env_file: gx-water.env
     restart: unless-stopped
-    networks:
-      - gx_event
   gx-lobby:
     build: spigot
     container_name: gx-lobby
@@ -25,8 +23,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-01:
     build: spigot
     container_name: gx-team-01
@@ -37,8 +33,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-02:
     build: spigot
     container_name: gx-team-02
@@ -49,8 +43,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-03:
     build: spigot
     container_name: gx-team-03
@@ -61,8 +53,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-04:
     build: spigot
     container_name: gx-team-04
@@ -73,8 +63,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-05:
     build: spigot
     container_name: gx-team-05
@@ -85,8 +73,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-06:
     build: spigot
     container_name: gx-team-06
@@ -97,8 +83,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-07:
     build: spigot
     container_name: gx-team-07
@@ -109,8 +93,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-08:
     build: spigot
     container_name: gx-team-08
@@ -121,8 +103,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-09:
     build: spigot
     container_name: gx-team-09
@@ -133,8 +113,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
   gx-team-10:
     build: spigot
     container_name: gx-team-10
@@ -145,8 +123,6 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-    networks:
-      - gx_event
 
 volumes:
   GX_WATER_SERVER: { }
@@ -163,6 +139,3 @@ volumes:
   GX_TEAM_08: { }
   GX_TEAM_09: { }
   GX_TEAM_10: { }
-
-networks:
-  gx_event:
