@@ -15,9 +15,7 @@ services:
       - gx_event
 
 volumes:
-  WATER_SERVER: { }
-  WATER_CONFIG: { }
-  WATER_PLUGINS: { }
+  WATER: { }
 
 networks:
   gx_event:

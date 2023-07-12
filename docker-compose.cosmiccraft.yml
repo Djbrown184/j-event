@@ -8,9 +8,7 @@ services:
     ports:
       - '25565:25577'
     volumes:
-      - WATER_SERVER:/server
-      - WATER_CONFIG:/config
-      - WATER_PLUGINS:/plugins
+      - WATER:/server
     env_file: gx_water.env
     restart: unless-stopped
     networks:
@@ -149,9 +147,7 @@ services:
       - gx_event
 
 volumes:
-  WATER_SERVER: { }
-  WATER_CONFIG: { }
-  WATER_PLUGINS: { }
+  WATER: { }
   LOBBY: { }
   TEAM_01: { }
   TEAM_02: { }
