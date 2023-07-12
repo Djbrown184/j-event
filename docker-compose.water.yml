@@ -21,3 +21,9 @@ networks:
   gx_event:
     internal: true
     name: gx_event_mc
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.35.0.0/16"
+        - gateway: "172.35.0.1"
