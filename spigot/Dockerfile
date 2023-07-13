@@ -1,4 +1,5 @@
-# syntax=docker/dockerfile:1
-FROM .
+FROM itzg/minecraft-server
 
-RUN sleep 60; COPY spigot.yml /
+ENV TYPE=PAPER
+
+COPY spigot.yml /

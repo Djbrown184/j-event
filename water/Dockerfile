@@ -1,3 +1,5 @@
-FROM .
+FROM itzg/bungeecord
 
-RUN sleep 60; COPY config.yml /
+ENV TYPE=WATERFALL
+
+COPY config.yml /
