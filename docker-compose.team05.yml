@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   gx_team_05:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_05
     image: itzg/minecraft-server:latest
     volumes:

@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   gx_water:
-    build: ./water
+    build: water/
     container_name: gx_water
     image: itzg/bungeecoord:latest
     ports:
@@ -14,7 +14,7 @@ services:
     networks:
       - mc
   gx_lobby:
-    build: ./spigot
+    build: spigot/
     container_name: gx_lobby
     image: itzg/minecraft-server:latest
     volumes:
@@ -26,7 +26,7 @@ services:
     networks:
       - mc
   gx_team_01:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_01
     image: itzg/minecraft-server:latest
     volumes:
@@ -38,7 +38,7 @@ services:
     networks:
       - mc
   gx_team_02:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_02
     image: itzg/minecraft-server:latest
     volumes:
@@ -50,7 +50,7 @@ services:
     networks:
       - mc
   gx_team_03:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_03
     image: itzg/minecraft-server:latest
     volumes:
@@ -62,7 +62,7 @@ services:
     networks:
       - mc
   gx_team_04:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_04
     image: itzg/minecraft-server:latest
     volumes:
@@ -74,7 +74,7 @@ services:
     networks:
       - mc
   gx_team_05:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_05
     image: itzg/minecraft-server:latest
     volumes:
@@ -86,7 +86,7 @@ services:
     networks:
       - mc
   gx_team_06:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_06
     image: itzg/minecraft-server:latest
     volumes:
@@ -98,7 +98,7 @@ services:
     networks:
       - mc
   gx_team_07:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_07
     image: itzg/minecraft-server:latest
     volumes:
@@ -110,7 +110,7 @@ services:
     networks:
       - mc
   gx_team_08:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_08
     image: itzg/minecraft-server:latest
     volumes:
@@ -122,7 +122,7 @@ services:
     networks:
       - mc
   gx_team_09:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_09
     image: itzg/minecraft-server:latest
     volumes:
@@ -134,7 +134,7 @@ services:
     networks:
       - mc
   gx_team_10:
-    build: ./spigot
+    build: spigot/
     container_name: gx_team_10
     image: itzg/minecraft-server:latest
     volumes:
