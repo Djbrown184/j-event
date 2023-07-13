@@ -3,11 +3,13 @@ version: "3.8"
 services:
   gx_db:
     container_name: gx_db
-    image: itzg/minecraft-server:latest
+    image: mariadb/server:latest
     volumes:
-      - DB:/data
+      - DB:/var/lib/mysql
     env_file: gx_db.env
     restart: unless-stopped
+    tty: true
+    stdin_open: true
     networks:
       - mc
 

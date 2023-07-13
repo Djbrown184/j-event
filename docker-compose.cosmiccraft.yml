@@ -133,6 +133,17 @@ services:
     stdin_open: true
     networks:
       - mc
+  gx_db:
+    container_name: gx_db
+    image: mariadb/server:latest
+    volumes:
+      - DB:/var/lib/mysql
+    env_file: gx_db.env
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    networks:
+      - mc
 
 volumes:
   WATER: { }
@@ -147,6 +158,7 @@ volumes:
   TEAM_08: { }
   TEAM_09: { }
   TEAM_10: { }
+  DB: { }
 
 networks:
   mc:
