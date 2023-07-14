@@ -96,10 +96,10 @@ data:
 
   # The name of the database to store LuckPerms data in.
   # - This must be created already. Don't worry about this setting if you're using MongoDB.
-  database: gx-event
+  database: j-event
 
   # Credentials for the database.
-  username: gx-event
+  username: j-event
   password: 'd8v1bniKgFOKxoKe'
 
   # These settings apply to the MySQL connection pool.

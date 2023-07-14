@@ -1,3 +1,3 @@
 #!/bin/sh
-cd ~/gx-event
+cd ~/j-event
 clear && docker-compose -f docker-compose.db.yml up -d
