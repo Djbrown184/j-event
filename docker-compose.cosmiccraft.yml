@@ -14,7 +14,6 @@ services:
       mc:
         ipv4_address: 172.18.0.15
   j_water:
-    build: water/
     container_name: j_water
     image: itzg/bungeecord:latest
     ports:
