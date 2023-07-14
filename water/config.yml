@@ -1,7 +1,7 @@
 server_connect_timeout: 5000
 enforce_secure_profile: false
 remote_ping_cache: -1
-forge_support: true
+forge_support: false
 player_limit: -1
 permissions:
   admin:
@@ -20,52 +20,52 @@ disabled_commands:
 - disabledcommandhere
 servers:
   lobby:
-    motd: '&1lobbyeee'
-    address: localhost:25565
+    motd: '&3Lobby &1Cosmic&5Craft'
+    address: 172.18.0.2:25565
     restricted: false
-  # team01:
-  #   motd: '&1Team01'
-  #   address: localhost:25566
-  #   restricted: false
-  # team02:
-  #   motd: '&1Team02'
-  #   address: localhost:25567
-  #   restricted: false
-  # team03:
-  #   motd: '&1Team03'
-  #   address: localhost:25568
-  #   restricted: false
-  # team04:
-  #   motd: '&1Team04'
-  #   address: localhost:25569
-  #   restricted: false
-  # team05:
-  #   motd: '&1Team05'
-  #   address: localhost:25570
-  #   restricted: false
-  # team06:
-  #   motd: '&1Team06'
-  #   address: localhost:25571
-  #   restricted: false
-  # team07:
-  #   motd: '&1Team07'
-  #   address: localhost:25572
-  #   restricted: false
-  # team08:
-  #   motd: '&1Team08'
-  #   address: localhost:25573
-  #   restricted: false
-  # team09:
-  #   motd: '&1Team09'
-  #   address: localhost:25574
-  #   restricted: false
-  # team10:
-  #   motd: '&1Team10'
-  #   address: localhost:25575
-  #   restricted: false
+  team01:
+    motd: '&3Team &201 &1Cosmic&5Craft'
+    address: 172.18.0.3:25566
+    restricted: false
+  team02:
+    motd: '&3Team &202 &1Cosmic&5Craft'
+    address: 172.18.0.4:25567
+    restricted: false
+  team03:
+    motd: '&3Team &203 &1Cosmic&5Craft'
+    address: 172.18.0.5:25568
+    restricted: false
+  team04:
+    motd: '&3Team &204 &1Cosmic&5Craft'
+    address: 172.18.0.6:25569
+    restricted: false
+  team05:
+    motd: '&3Team &205 &1Cosmic&5Craft'
+    address: 172.18.0.7:25570
+    restricted: false
+  team06:
+    motd: '&3Team &206 &1Cosmic&5Craft'
+    address: 172.18.0.8:25571
+    restricted: false
+  team07:
+    motd: '&3Team &207 &1Cosmic&5Craft'
+    address: 172.18.0.9:25572
+    restricted: false
+  team08:
+    motd: '&3Team &208 &1Cosmic&5Craft'
+    address: 172.18.0.10:25573
+    restricted: false
+  team09:
+    motd: '&3Team &209 &1Cosmic&5Craft'
+    address: 172.18.0.11:25574
+    restricted: false
+  team10:
+    motd: '&3Team &210 &1Cosmic&5Craft'
+    address: 172.18.0.12:25575
+    restricted: false
 listeners:
 - query_port: 25577
-  motd: '&1CosmicCraft'
+  motd: '&1Cosmic&5Craft'
   tab_list: GLOBAL_PING
   query_enabled: false
   proxy_protocol: false
@@ -78,7 +78,7 @@ listeners:
   host: 0.0.0.0:25577
   max_players: 100
   tab_size: 60
-  force_default_server: true
+  force_default_server: false
 ip_forward: true
 remote_ping_timeout: 5000
 prevent_proxy_connections: false
@@ -86,6 +86,8 @@ groups:
   Djbrown_:
   - admin
   Xbird_:
+  - admin
+  Sheiyla:
   - admin
 connection_throttle: 4000
 stats: 260d83f6-57c0-4c28-9958-06f6368972fa

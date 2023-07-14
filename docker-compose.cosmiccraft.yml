@@ -1,151 +1,166 @@
 version: "3.8"
 
 services:
-  gx_water:
-    container_name: gx_water
-    image: itzg/bungeecoord:latest
+  j_db:
+    container_name: j_db
+    image: mariadb/server:latest
+    volumes:
+      - DB:/var/lib/mysql
+    env_file: j_db.env
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    networks:
+      mc:
+        ipv4_address: 172.18.0.15
+  j_water:
+    build: water/
+    container_name: j_water
+    image: itzg/bungeecord:latest
     ports:
       - '25565:25577'
     volumes:
       - WATER:/server
-    env_file: gx_water.env
+    env_file: j_water.env
     restart: unless-stopped
     networks:
-      - mc
-  gx_lobby:
-    container_name: gx_lobby
+      mc:
+        ipv4_address: 172.18.0.1
+  j_lobby:
+    container_name: j_lobby
     image: itzg/minecraft-server:latest
     volumes:
       - LOBBY:/data
-    env_file: gx_lobby.env
+    env_file: j_lobby.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_01:
-    container_name: gx_team_01
+      mc:
+        ipv4_address: 172.18.0.2
+  j_team_01:
+    container_name: j_team_01
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_01:/data
-    env_file: gx_team_01.env
+    env_file: j_team_01.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_02:
-    container_name: gx_team_02
+      mc:
+        ipv4_address: 172.18.0.3
+  j_team_02:
+    container_name: j_team_02
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_02:/data
-    env_file: gx_team_02.env
+    env_file: j_team_02.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_03:
-    container_name: gx_team_03
+      mc:
+        ipv4_address: 172.18.0.4
+  j_team_03:
+    container_name: j_team_03
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_03:/data
-    env_file: gx_team_03.env
+    env_file: j_team_03.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_04:
-    container_name: gx_team_04
+      mc:
+        ipv4_address: 172.18.0.5
+  j_team_04:
+    container_name: j_team_04
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_04:/data
-    env_file: gx_team_04.env
+    env_file: j_team_04.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_05:
-    container_name: gx_team_05
+      mc:
+        ipv4_address: 172.18.0.6
+  j_team_05:
+    container_name: j_team_05
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_05:/data
-    env_file: gx_team_05.env
+    env_file: j_team_05.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_06:
-    container_name: gx_team_06
+      mc:
+        ipv4_address: 172.18.0.7
+  j_team_06:
+    container_name: j_team_06
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_06:/data
-    env_file: gx_team_06.env
+    env_file: j_team_06.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_07:
-    container_name: gx_team_07
+      mc:
+        ipv4_address: 172.18.0.8
+  j_team_07:
+    container_name: j_team_07
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_07:/data
-    env_file: gx_team_07.env
+    env_file: j_team_07.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_08:
-    container_name: gx_team_08
+      mc:
+        ipv4_address: 172.18.0.9
+  j_team_08:
+    container_name: j_team_08
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_08:/data
-    env_file: gx_team_08.env
+    env_file: j_team_08.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_09:
-    container_name: gx_team_09
+      mc:
+        ipv4_address: 172.18.0.10
+  j_team_09:
+    container_name: j_team_09
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_09:/data
-    env_file: gx_team_09.env
+    env_file: j_team_09.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_team_10:
-    container_name: gx_team_10
+      mc:
+        ipv4_address: 172.18.0.11
+  j_team_10:
+    container_name: j_team_10
     image: itzg/minecraft-server:latest
     volumes:
       - TEAM_10:/data
-    env_file: gx_team_10.env
+    env_file: j_team_10.env
     restart: unless-stopped
     tty: true
     stdin_open: true
     networks:
-      - mc
-  gx_db:
-    container_name: gx_db
-    image: mariadb/server:latest
-    volumes:
-      - DB:/var/lib/mysql
-    env_file: gx_db.env
-    restart: unless-stopped
-    tty: true
-    stdin_open: true
-    networks:
-      - mc
+      mc:
+        ipv4_address: 172.18.0.12
 
 volumes:
+  DB: { }
   WATER: { }
   LOBBY: { }
   TEAM_01: { }
@@ -158,7 +173,12 @@ volumes:
   TEAM_08: { }
   TEAM_09: { }
   TEAM_10: { }
-  DB: { }
 
 networks:
   mc:
+    driver: bridge
+    enable_ipv6: false
+    ipam:
+     config:
+       - subnet: 172.18.0.0/16
+         gateway: 172.18.0.16
